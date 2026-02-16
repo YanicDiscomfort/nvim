@@ -1,5 +1,15 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
-  lazy = false,
-  build = ':TSUpdate'
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate',
+
+    config = function()
+        require('nvim-treesitter').install(
+            {
+                'lua',
+                'javascript',
+                'c++'
+            }
+        )
+    end
 }
