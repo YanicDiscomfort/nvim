@@ -1,11 +1,15 @@
 return {
     'vyfor/cord.nvim',
-    opts = {
-        display = {
-            theme = 'minecraft'
-        },
-        idle = {
-            enabled = false
+
+    config = function()
+        require('cord').setup {
+            display = {
+                theme = 'minecraft'
+            },
+            idle = {
+                enabled = false
+            }
+
         }
-    }
+    end
 }
