@@ -4,12 +4,14 @@ return {
     build = ':TSUpdate',
 
     config = function()
-        require('nvim-treesitter').install(
-            {
+        require('nvim-treesitter').setup({
+            ensure_installed = {
                 'lua',
-                'javascript',
-                'c++'
-            }
-        )
+                'cpp',
+                'bash'
+            },
+            sync_install = true,
+            auto_install = true,
+        })
     end
 }
