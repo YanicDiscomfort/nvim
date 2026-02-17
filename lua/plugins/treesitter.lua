@@ -7,8 +7,6 @@ return {
         require('nvim-treesitter').setup({
             ensure_installed = {
                 'lua',
-                'cpp',
-                'bash'
             },
             sync_install = true,
             auto_install = true,
